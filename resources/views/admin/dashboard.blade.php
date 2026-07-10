@@ -131,7 +131,7 @@
             <div class="workspace-selector flex items-center justify-between p-2 mb-4 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg cursor-pointer transition-colors relative group">
                 <div class="flex items-center gap-2.5">
                     <div class="w-8 h-8 rounded-lg logo-gradient-bg flex items-center justify-center shrink-0">
-                        <span class="text-white text-sm font-bold" style="font-family: 'Nasalization Rg', sans-serif; font-weight: 400;">A</span>
+                        <span class="text-white text-lg font-bold" style="font-family: 'Nasalization Rg', sans-serif; font-weight: 400;">A</span>
                     </div>
                     <div class="school-info overflow-hidden">
                         <h1 class="text-lg text-slate-900 dark:text-slate-50 truncate leading-normal tracking-wide" style="font-family: 'Nasalization Rg', sans-serif; font-weight: 400;">SANS.dev</h1>
@@ -250,14 +250,6 @@
                         <span class="text-slate-300 dark:text-slate-700">/</span>
                         <span class="text-slate-700 dark:text-slate-200 font-semibold">Dashboard</span>
                     </nav>
-                </div>
-
-                <!-- Search bar -->
-                <div class="relative w-40 sm:w-48 md:w-64">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <i data-lucide="search" class="w-4 h-4 text-slate-400"></i>
-                    </span>
-                    <input type="text" placeholder="Cari..." class="w-full bg-transparent border border-slate-200 dark:border-slate-800 rounded-md py-1.5 pl-9 pr-4 text-xs text-slate-900 dark:text-slate-50 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-400 dark:focus:ring-slate-650 transition-all">
                 </div>
 
                 <!-- Action items -->
