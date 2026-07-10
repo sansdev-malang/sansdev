@@ -120,7 +120,7 @@
             }
         </style>
     </head>
-    <body class="h-full bg-slate-50 text-[#09090b] antialiased overflow-x-hidden transition-colors duration-200">
+    <body class="h-full bg-slate-50 dark:bg-[#09090b] text-[#09090b] dark:text-slate-50 antialiased overflow-x-hidden transition-colors duration-200">
         <div class="flex h-screen overflow-hidden">
 
             <!-- SIDEBAR BACKDROP FOR MOBILE -->
@@ -140,13 +140,13 @@
         </div>
 
         <!-- TOAST NOTIFICATION CONTAINER -->
-        <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden bg-white text-slate-900 px-4 py-3 rounded-xl shadow-lg border border-slate-200 flex items-center gap-3 max-w-sm">
-            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+        <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 px-4 py-3 rounded-xl shadow-lg border border-slate-200 dark:border-slate-800 flex items-center gap-3 max-w-sm">
+            <div class="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center shrink-0">
                 <i data-lucide="check" class="w-4 h-4"></i>
             </div>
             <div>
                 <h5 class="text-xs font-bold">Notifikasi</h5>
-                <p class="text-xs text-slate-500">Pesan simulasi berhasil terkirim.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Pesan simulasi berhasil terkirim.</p>
             </div>
         </div>
 
