@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EduSystem SIS - Portal Pendidikan</title>
+    <title>SANS.dev SIS - Portal Pendidikan</title>
 
     <!-- Google Fonts: Inter & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +108,7 @@
         <div class="text-center space-y-4 max-w-2xl">
             <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f172a] dark:text-slate-50">Pilih Unit Pendidikan Anda</h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Selamat datang di Portal EduSystem. Silakan pilih jenjang pendidikan untuk melanjutkan ke halaman login yang sesuai dengan kurikulum Anda.
+                Selamat datang di Portal SANS.dev. Silakan pilih jenjang pendidikan untuk melanjutkan ke halaman login yang sesuai dengan kurikulum Anda.
             </p>
         </div>
 
@@ -131,7 +131,7 @@
                 </div>
                 
                 <div class="flex items-center justify-between pt-6 mt-4 border-t border-slate-100 dark:border-slate-900/60">
-                    <span class="text-[10px] font-bold text-teal-650 dark:text-teal-400 uppercase tracking-widest">Kurikulum Merdeka</span>
+                    <span class="text-[10px] font-bold text-teal-650 dark:text-teal-400 uppercase tracking-widest">Login ke Dashboard PAUD & TK</span>
                     <a href="/admin" class="w-8 h-8 rounded-full bg-[#eff6ff] hover:bg-[#dbeafe] text-blue-650 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-blue-400 flex items-center justify-center transition-colors">
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
@@ -146,7 +146,7 @@
                         <i data-lucide="book-open" class="w-5.5 h-5.5"></i>
                     </div>
                     <div class="space-y-2">
-                        <h3 class="text-2xl font-bold text-[#0f172a] dark:text-slate-50">Sekolah Dasar (SD)</h3>
+                        <h3 class="text-2xl font-bold text-[#0f172a] dark:text-slate-50">Sekolah Dasar</h3>
                         <p class="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed">
                             Membangun fondasi akademik yang kokoh melalui pembelajaran interaktif dan literasi yang terintegrasi secara digital.
                         </p>
@@ -154,8 +154,8 @@
                 </div>
                 
                 <div class="flex items-center justify-between pt-6 mt-4 border-t border-slate-100 dark:border-slate-900/60">
-                    <span class="text-[10px] font-bold text-slate-800 dark:text-slate-400 uppercase tracking-widest">Standard Nasional</span>
-                    <a href="/admin" class="w-8 h-8 rounded-full bg-[#eff6ff] hover:bg-[#dbeafe] text-blue-655 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-blue-400 flex items-center justify-center transition-colors">
+                    <span class="text-[10px] font-bold text-slate-800 dark:text-slate-400 uppercase tracking-widest">Login ke Dashboard SD</span>
+                    <a href="{{ route('login') }}" class="w-8 h-8 rounded-full bg-[#eff6ff] hover:bg-[#dbeafe] text-blue-655 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-blue-400 flex items-center justify-center transition-colors">
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
@@ -169,7 +169,7 @@
                         <i data-lucide="microscope" class="w-5.5 h-5.5"></i>
                     </div>
                     <div class="space-y-2">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">Sekolah Menengah (SMP)</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-50">Sekolah Menengah Pertama</h3>
                         <p class="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed">
                             Persiapan menuju tingkat lanjut dengan fokus pada sains, teknologi, dan kemandirian berpikir kritis siswa remaja.
                         </p>
@@ -177,7 +177,7 @@
                 </div>
                 
                 <div class="flex items-center justify-between pt-6 mt-4 border-t border-slate-100 dark:border-slate-900/60">
-                    <span class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">Global Excellence</span>
+                    <span class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">Login ke Dashboard SMP</span>
                     <a href="/admin" class="w-8 h-8 rounded-full bg-[#eff6ff] hover:bg-[#dbeafe] text-blue-655 dark:bg-slate-900 dark:hover:bg-slate-800 dark:text-blue-400 flex items-center justify-center transition-colors">
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
@@ -197,8 +197,7 @@
     <footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-[#e6f0fa]/40 dark:bg-slate-950/40 transition-colors duration-200 py-8">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="space-y-1 text-center md:text-left">
-                <h4 class="text-xs font-bold text-slate-900 dark:text-slate-50">EduSystem SIS</h4>
-                <p class="text-[10px] text-slate-500 dark:text-slate-400">&copy; 2026 EduSystem School Information System. All rights reserved.</p>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">&copy; 2026 SANS.dev School Information System. All rights reserved.</p>
             </div>
             <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center text-[10px] font-semibold text-slate-500 dark:text-slate-400">
                 <a href="#" class="hover:text-slate-900 dark:hover:text-slate-50 transition-colors">Privacy Policy</a>
