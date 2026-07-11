@@ -7,11 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.dashboard_template');
-});
-
-Route::get('/admin/siswa', function () {
+Route::get('/siswa', function () {
     return view('admin.siswa');
 });
 
