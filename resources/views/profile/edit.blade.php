@@ -16,7 +16,6 @@
             <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
                 <div class="flex justify-between items-start">
                     <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Informasi Akun</p>
                         @include('profile.partials.update-profile-information-form')
                     </div>
                 </div>
@@ -26,17 +25,21 @@
             <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
                 <div class="flex justify-between items-start">
                     <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Informasi Akun</p>
                         @include('profile.partials.update-password-form')
                     </div>
                 </div>
             </div>
+        </section>
 
-            
+        <!-- DELETE USER FORM -->
+        <section>
+            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
+                <div class="flex justify-between items-start">
+                    <div>
+                        @include('profile.partials.delete-user-form')
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </x-admin-layout>
-
-@include('profile.partials.update-profile-information-form')
-@include('profile.partials.update-password-form')
-@include('profile.partials.delete-user-form')
