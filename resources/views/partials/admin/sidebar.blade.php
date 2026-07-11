@@ -177,8 +177,3 @@
     </div>
 
 </aside>
-
-{{ route('profile.edit') }}
-{{ route('logout') }}
-{{ Auth::user()->name }}
-{{ Auth::user()->email }}
