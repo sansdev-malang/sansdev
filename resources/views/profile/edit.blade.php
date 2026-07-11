@@ -9,7 +9,7 @@
                 <!-- Example of breadcrumbs or status -->
                 <nav class="text-xs text-slate-500 dark:text-slate-400" aria-label="breadcrumb">
                     <ol class="flex items-center gap-1">
-                        <li><a href="{{ route('admin.dashboard') }}" class="hover:text-primary">Dashboard</a></li>
+                        <li><a href="" class="hover:text-primary">Dashboard</a></li>
                         <li>/</li>
                         <li>Profile</li>
                     </ol>
