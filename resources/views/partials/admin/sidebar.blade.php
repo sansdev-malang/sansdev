@@ -85,14 +85,6 @@
                         Pengaturan
                     </span>
                 </a>
-                <!-- Log Out Menu Item -->
-                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors text-xs font-medium relative group cursor-pointer">
-                    <i data-lucide="log-out" class="menu-icon w-4 h-4"></i>
-                    <span class="menu-text">Log Out</span>
-                    <span class="sidebar-tooltip absolute left-full ml-3 px-2 py-1 bg-slate-950 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-50 dark:text-slate-100 text-xs font-semibold rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all origin-left duration-150 pointer-events-none whitespace-nowrap z-50">
-                        Log Out
-                    </span>
-                </a>
             </nav>
         </div>
     </div>
