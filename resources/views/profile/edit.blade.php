@@ -10,7 +10,7 @@
         </section>
 
         <!-- STAT CARDS GRID -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
+        <section class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-2">
             
             <!-- Stat Card 1 -->
             <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
