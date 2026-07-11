@@ -2,20 +2,12 @@
     <!-- Main Content Wrapper -->
     <div class="main-content flex-1 bg-slate-50 dark:bg-slate-950 transition-all duration-300 ease-in-out">
 
-        <!-- Top Header Bar -->
-        <div class="h-16 flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm z-10">
-            <h1 class="text-xl font-semibold text-slate-900 dark:text-slate-100">Profile</h1>
-            <div class="flex items-center gap-4">
-                <!-- Example of breadcrumbs or status -->
-                <nav class="text-xs text-slate-500 dark:text-slate-400" aria-label="breadcrumb">
-                    <ol class="flex items-center gap-1">
-                        <li><a href="" class="hover:text-primary">Dashboard</a></li>
-                        <li>/</li>
-                        <li>Profile</li>
-                    </ol>
-                </nav>
+        <!-- GREETING / PAGE TITLE -->
+        <section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div class="flex flex-col gap-0.5">
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Profile</h2>
             </div>
-        </div>
+        </section>
 
         <!-- Page Content -->
         <div class="px-6 py-4">
