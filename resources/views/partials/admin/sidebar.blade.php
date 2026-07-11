@@ -158,7 +158,7 @@
             <!-- Tooltip for collapsed view -->
             <span
                 class="sidebar-tooltip absolute left-full ml-3 px-2 py-1 bg-slate-950 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-50 dark:text-slate-100 text-xs font-semibold rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all origin-left duration-150 pointer-events-none whitespace-nowrap z-50">
-                Admin SANS
+                {{ Auth::user()->name }}
             </span>
         </div>
     </div>
