@@ -136,11 +136,14 @@
             <div class="border-t border-slate-100 dark:border-slate-900 my-1"></div>
 
             <!-- Log Out -->
-            <a href="{{ route('logout') }}"
-                class="flex items-center gap-2 px-3 py-2 text-xs text-red-650 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors">
-                <i data-lucide="log-out" class="w-4 h-4 text-red-500 dark:text-red-450"></i>
-                <span>Log out</span>
-            </a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit"
+                    class="flex items-center gap-2 px-3 py-2 text-xs text-red-650 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors">
+                    <i data-lucide="log-out" class="w-4 h-4 text-red-500 dark:text-red-450"></i>
+                    <span>Log out</span>
+                </button>
+            </form>
         </div>
 
         <div @click="open = !open"
