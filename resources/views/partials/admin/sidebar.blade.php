@@ -161,9 +161,8 @@
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256"
                     alt="Avatar" class="w-7 h-7 rounded-lg object-cover ring-1 ring-slate-200 dark:ring-slate-800">
                 <div class="user-info overflow-hidden">
-                    <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-50 truncate leading-none">Admin SANS
-                    </h4>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-1">admin@sansmalang.sch.id</p>
+                    <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-50 truncate leading-none">{{ Auth::user()->name }}</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-1">{{ Auth::user()->email }}</p>
                 </div>
             </div>
             <i data-lucide="chevrons-up-down" class="chevron-icon w-4 h-4 text-slate-400 shrink-0 ml-1"></i>
