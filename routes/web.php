@@ -11,6 +11,10 @@ Route::get('/admin', function () {
     return view('admin.dashboard_template');
 });
 
+Route::get('/admin/siswa', function () {
+    return view('admin.siswa');
+});
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
