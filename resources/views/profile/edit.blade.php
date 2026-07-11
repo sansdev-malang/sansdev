@@ -2,6 +2,8 @@
     <!-- Main Content Wrapper -->
     <div class="main-content flex-1 bg-slate-50 dark:bg-slate-950 transition-all duration-300 ease-in-out">
 
+    <div class="p-6 space-y-6">
+
         <!-- GREETING / PAGE TITLE -->
         <section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div class="flex flex-col gap-0.5">
@@ -30,6 +32,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
 
     </div>
