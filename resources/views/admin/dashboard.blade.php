@@ -7,11 +7,6 @@
                 <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Dashboard</h2>
                 <p class="text-xs text-slate-500 dark:text-slate-400">Selamat datang kembali! Aktivitas sekolah SANS Malang terpantau kondusif.</p>
             </div>
-            <div class="flex gap-2">
-                <button class="px-3 py-1.5 bg-slate-900 dark:bg-slate-50 hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-medium rounded-md text-xs shadow-sm cursor-pointer transition-colors">
-                    Unduh Laporan
-                </button>
-            </div>
         </section>
 
         <!-- STAT CARDS GRID -->
