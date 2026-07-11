@@ -121,18 +121,6 @@
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95" style="display: none;">
 
-            <!-- User Header details -->
-            <div class="px-3 py-2 flex items-center gap-2.5">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256"
-                    alt="Avatar" class="w-8 h-8 rounded-lg object-cover ring-1 ring-slate-200 dark:ring-slate-800">
-                <div class="overflow-hidden">
-                    <h4 class="text-xs font-bold text-slate-900 dark:text-slate-50 truncate leading-none">{{ Auth::user()->name }}</h4>
-                    <p class="text-[10px] text-slate-500 dark:text-slate-400 truncate mt-1">{{ Auth::user()->email }}</p>
-                </div>
-            </div>
-
-            <div class="border-t border-slate-100 dark:border-slate-900 my-1"></div>
-
             <!-- Account Info -->
             <a href="{{ route('profile.edit') }}"
                 class="flex items-center gap-2 px-3 py-2 text-xs text-slate-700 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900/50 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
