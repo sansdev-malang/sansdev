@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/siswa', function () {
     return view('admin.siswa');
-});
+})->middleware(['auth', 'verified'])->name('siswa');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
