@@ -1,5 +1,5 @@
-<section class="rounded-xl border border-gray-200 bg-white text-gray-950 shadow-sm dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
-    <div class="flex flex-col space-y-1.5 p-6">
+<section>
+    <div>
         <h2 class="text-2xl font-semibold leading-none tracking-tight">
             {{ __('Profile Information') }}
         </h2>
