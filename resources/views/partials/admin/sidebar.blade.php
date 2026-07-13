@@ -75,7 +75,63 @@
             </nav>
         </div>
 
-        <!-- Group 2: ZK-Absensi (Dropdown style) -->
+        <!-- Group 2: Homebase (Dropdown style) -->
+        <div>
+            <h3
+                class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
+                Homebase</h3>
+            <nav class="space-y-1"></nav>
+            <div x-data="{ open1: false, open2: false }">
+                <button @click="open1 = !open1"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="home" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Database</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open1 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <!-- Dropdown content with line connector -->
+                <div x-show="open1" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Laporan Harian & Bonus
+                    </a>
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Data Absensi
+                    </a>
+                </div>
+
+                <button @click="open2 = !open2"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="file-cog" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Pengaturan Absensi</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open2 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <div x-show="open2" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Skema Bonus
+                    </a>
+                    <a href="{{ route('absensi-karyawan') }}"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Karyawan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group 3: ZK-Absensi (Dropdown style) -->
         <div>
             <h3
                 class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
@@ -131,7 +187,7 @@
             </div>
         </div>
 
-        <!-- Group 3: Manajemen -->
+        <!-- Group 4: Manajemen -->
         <div>
             <h3
                 class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">

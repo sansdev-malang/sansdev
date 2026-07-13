@@ -36,7 +36,7 @@
                     <p class="text-sm text-slate-500 dark:text-slate-400">
                         {{ __('Your email address is unverified.') }}
 
-                        <button form="send-verification" class="font-medium text-slate-900 hover:underline focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 ml-1 dark:text-slate-50 dark:focus:ring-slate-300">
+                        <button form="send-verification" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-50 hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 text-xs font-semibold rounded-lg shadow-sm transition-all duration-150 cursor-pointer">
                             {{ __('Click here to re-send the verification email.') }}
                         </button>
                     </p>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 disabled:pointer-events-none disabled:opacity-50 bg-slate-900 text-slate-50 shadow hover:bg-slate-900/90 h-9 px-4 py-2 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90 dark:focus-visible:ring-slate-300">
+            <button type="submit" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-50 hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 text-xs font-semibold rounded-lg shadow-sm transition-all duration-150 cursor-pointer">
                 {{ __('Save') }}
             </button>
 

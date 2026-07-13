@@ -49,7 +49,7 @@
                     {{ __('Cancel') }}
                 </button>
 
-                <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 disabled:pointer-events-none disabled:opacity-50 bg-red-600 text-white shadow hover:bg-red-600/90 h-9 px-4 py-2 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/90 dark:focus-visible:ring-slate-300">
+                <button type="submit" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-600 dark:bg-red-50 hover:bg-red-800 dark:hover:bg-red-200 text-white dark:text-red-900 text-xs font-semibold rounded-lg shadow-sm transition-all duration-150 cursor-pointer">
                     {{ __('Delete Account') }}
                 </button>
             </div>
