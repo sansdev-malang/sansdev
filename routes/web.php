@@ -11,6 +11,14 @@ Route::get('/siswa', function () {
     return view('admin.siswa');
 })->middleware(['auth', 'verified'])->name('siswa');
 
+Route::get('/guru', function () {
+    return view('admin.guru');
+})->middleware(['auth', 'verified'])->name('guru');
+
+Route::get('/absensi-karyawan', function () {
+    return view('admin.absensi-karyawan');
+})->middleware(['auth', 'verified'])->name('absensi-karyawan');
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -43,8 +43,7 @@
                     </span>
                 </a>
 
-                <a href="{{ route('siswa') }}"
-                    class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg
+                <a href="{{ route('siswa') }}" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg
                     {{ Request::routeIs('siswa') ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 font-medium' : 'text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50' }}
                     text-xs relative group">
                     <i data-lucide="users" class="menu-icon w-4 h-4"></i>
@@ -54,8 +53,9 @@
                         Data Siswa
                     </span>
                 </a>
-                <a href="#"
-                    class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group">
+                <a href="{{ route('guru') }}" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg
+                    {{ Request::routeIs('guru') ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 font-medium' : 'text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50' }}
+                    text-xs relative group">
                     <i data-lucide="graduation-cap" class="menu-icon w-4 h-4"></i>
                     <span class="menu-text">Data Guru</span>
                     <span
@@ -75,7 +75,63 @@
             </nav>
         </div>
 
-        <!-- Group 2: Manajemen -->
+        <!-- Group 2: ZK-Absensi (Dropdown style) -->
+        <div>
+            <h3
+                class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
+                ZK-Absensi</h3>
+            <nav class="space-y-1"></nav>
+            <div x-data="{ open1: false, open2: false }">
+                <button @click="open1 = !open1"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="file-key" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Data Absensi</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open1 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <!-- Dropdown content with line connector -->
+                <div x-show="open1" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Rekap Harian & Bonus
+                    </a>
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Data Absensi
+                    </a>
+                </div>
+
+                <button @click="open2 = !open2"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="file-cog" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Pengaturan Absensi</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open2 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <div x-show="open2" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="#"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Skema Bonus
+                    </a>
+                    <a href="{{ route('absensi-karyawan') }}"
+                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Karyawan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group 3: Manajemen -->
         <div>
             <h3
                 class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
@@ -111,6 +167,8 @@
             </nav>
         </div>
     </div>
+
+
 
     <!-- Bottom User Account Profile Menu (dropdown lookalike at bottom of sidebar-07) -->
     <div class="pt-2 border-t border-slate-200 dark:border-slate-800 relative" x-data="{ open: false }">
@@ -154,7 +212,9 @@
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256"
                     alt="Avatar" class="w-7 h-7 rounded-lg object-cover ring-1 ring-slate-200 dark:ring-slate-800">
                 <div class="user-info overflow-hidden">
-                    <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-50 truncate leading-none">{{ Auth::user()->name }}</h4>
+                    <h4 class="text-xs font-semibold text-slate-900 dark:text-slate-50 truncate leading-none">
+                        {{ Auth::user()->name }}
+                    </h4>
                     <p class="text-xs text-slate-500 dark:text-slate-400 truncate mt-1">{{ Auth::user()->email }}</p>
                 </div>
             </div>
