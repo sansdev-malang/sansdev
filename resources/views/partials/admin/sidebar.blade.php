@@ -98,7 +98,7 @@
                     style="margin-left:20px">
                     <a href="#"
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Rekap Harian & Bonus
+                        Laporan Harian & Bonus
                     </a>
                     <a href="#"
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
