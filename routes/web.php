@@ -25,17 +25,49 @@ Route::get('/dashboard', function () {
 
 
 // Route Absensi
+Route::get('/absensi_hari_ini', function () {
+    return view('admin.absensi_hari_ini');
+})->middleware(['auth', 'verified'])->name('absensi_hari_ini');
+
 Route::get('/absensi_laporan', function () {
     return view('admin.absensi_laporan');
 })->middleware(['auth', 'verified'])->name('absensi_laporan');
 
+Route::get('/absensi_riwayat', function () {
+    return view('admin.absensi_riwayat');
+})->middleware(['auth', 'verified'])->name('absensi_riwayat');
+
+Route::get('/absensi_izin_cuti', function () {
+    return view('admin.absensi_izin_cuti');
+})->middleware(['auth', 'verified'])->name('absensi_izin_cuti');
+
+Route::get('/absensi_approval', function () {
+    return view('admin.absensi_approval');
+})->middleware(['auth', 'verified'])->name('absensi_approval');
+
+Route::get('/absensi_mesin', function () {
+    return view('admin.absensi_mesin');
+})->middleware(['auth', 'verified'])->name('absensi_mesin');
+
+Route::get('/absensi_log_penarikan', function () {
+    return view('admin.absensi_log_penarikan');
+})->middleware(['auth', 'verified'])->name('absensi_log_penarikan');
+
+Route::get('/absensi_shift', function () {
+    return view('admin.absensi_shift');
+})->middleware(['auth', 'verified'])->name('absensi_shift');
+
+Route::get('/absensi_libur', function () {
+    return view('admin.absensi_libur');
+})->middleware(['auth', 'verified'])->name('absensi_libur');
+
+Route::get('/absensi_bonus_denda', function () {
+    return view('admin.absensi_bonus_denda');
+})->middleware(['auth', 'verified'])->name('absensi_bonus_denda');
+
 Route::get('/absensi_karyawan', function () {
     return view('admin.absensi_karyawan');
 })->middleware(['auth', 'verified'])->name('absensi_karyawan');
-
-Route::get('absensi_riwayat', function () {
-    return view('admin.absensi_riwayat');
-})->middleware(['auth', 'verified'])->name('absensi_riwayat');
 
 
 

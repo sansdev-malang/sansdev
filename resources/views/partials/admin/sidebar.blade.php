@@ -150,38 +150,41 @@
         <div>
             <h3
                 class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
-                ZK-Absensi</h3>
+                Manajemen Absensi</h3>
             <nav class="space-y-1"></nav>
-            <div x-data="{ open1: false, open2: false }">
+            <div x-data="{ open1: false, open2: false, open3: false, open4: false }">
+                
+                <!-- Data Kehadiran -->
                 <button @click="open1 = !open1"
                     class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
                     <div class="flex items-center gap-3">
                         <i data-lucide="scan-face" class="menu-icon w-4 h-4"></i>
-                        <span class="menu-text">Data Absensi</span>
+                        <span class="menu-text">Data Kehadiran</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
                         :style="open1 ? 'transform: rotate(90deg);' : ''"></i>
                 </button>
 
-                <!-- Dropdown content with line connector -->
                 <div x-show="open1" x-collapse
                     class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
                     style="margin-left:20px">
-                    <a href="{{ route('absensi_laporan') }}"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Laporan
+                    <a href="{{ route('absensi_hari_ini') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Absensi Hari Ini
                     </a>
-                    <a href="{{ route('absensi_riwayat') }}"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Riwayat
+                    <a href="{{ route('absensi_laporan') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Laporan / Rekap
+                    </a>
+                    <a href="{{ route('absensi_riwayat') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Riwayat Absensi
                     </a>
                 </div>
 
+                <!-- Izin & Cuti -->
                 <button @click="open2 = !open2"
                     class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
                     <div class="flex items-center gap-3">
-                        <i data-lucide="calendar-cog" class="menu-icon w-4 h-4"></i>
-                        <span class="menu-text">Pengaturan Absensi</span>
+                        <i data-lucide="calendar-clock" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Izin & Cuti</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
                         :style="open2 ? 'transform: rotate(90deg);' : ''"></i>
@@ -190,15 +193,64 @@
                 <div x-show="open2" x-collapse
                     class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
                     style="margin-left:20px">
-                    <a href="#"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Skema Bonus
+                    <a href="{{ route('absensi_izin_cuti') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Pengajuan Izin/Cuti
                     </a>
-                    <a href="{{ route('absensi_karyawan') }}"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Karyawan
+                    <a href="{{ route('absensi_approval') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Approval (Persetujuan)
                     </a>
                 </div>
+                
+                <!-- Pengaturan Mesin / Integrasi -->
+                <button @click="open3 = !open3"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="fingerprint" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Mesin & Perangkat</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open3 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <div x-show="open3" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="{{ route('absensi_mesin') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Data Mesin ZK
+                    </a>
+                    <a href="{{ route('absensi_log_penarikan') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Log Penarikan
+                    </a>
+                </div>
+
+                <!-- Pengaturan Absensi -->
+                <button @click="open4 = !open4"
+                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="settings-2" class="menu-icon w-4 h-4"></i>
+                        <span class="menu-text">Pengaturan</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
+                        :style="open4 ? 'transform: rotate(90deg);' : ''"></i>
+                </button>
+
+                <div x-show="open4" x-collapse
+                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
+                    style="margin-left:20px">
+                    <a href="{{ route('absensi_shift') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Jam Kerja (Shift)
+                    </a>
+                    <a href="{{ route('absensi_libur') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Hari Libur
+                    </a>
+                    <a href="{{ route('absensi_bonus_denda') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Skema Bonus / Denda
+                    </a>
+                    <a href="{{ route('absensi_karyawan') }}" class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        Data Pegawai
+                    </a>
+                </div>
+
             </div>
         </div>
 

@@ -1,91 +1,110 @@
 <x-admin-layout>
     <div class="p-6 space-y-6">
-
-        <!-- GREETING / PAGE TITLE -->
+        <!-- Header -->
         <section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div class="flex flex-col gap-0.5">
-                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Laporan Absensi</h2>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Selamat datang kembali! Aktivitas sekolah SANS Malang terpantau kondusif.</p>
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Laporan Rekap Absensi</h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Analisis dan rekapitulasi data kehadiran guru dan karyawan.</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold rounded-lg shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer">
+                    <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+                    Export Excel
+                </button>
+                <button class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-50 text-white dark:text-slate-900 text-xs font-semibold rounded-lg shadow-sm hover:bg-slate-800 dark:hover:bg-slate-200 transition-all cursor-pointer">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                    Cetak PDF
+                </button>
             </div>
         </section>
 
-        <!-- STAT CARDS GRID -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Filters -->
+        <section class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="space-y-1.5">
+                    <label class="text-xs font-semibold text-slate-500 dark:text-slate-400">Periode Tanggal</label>
+                    <div class="relative w-full">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i>
+                        </span>
+                        <input type="text" placeholder="01 Jul 2026 - 31 Jul 2026" class="w-full h-9 pl-9 pr-4 text-xs font-medium bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-200 dark:focus:ring-slate-700 text-slate-800 dark:text-slate-200 transition-all shadow-inner">
+                    </div>
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-xs font-semibold text-slate-500 dark:text-slate-400">Tipe Pegawai</label>
+                    <select class="w-full h-9 px-3 text-xs font-medium bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-200 dark:focus:ring-slate-700 text-slate-800 dark:text-slate-200 transition-all shadow-sm">
+                        <option>Semua Tipe</option>
+                        <option>Guru</option>
+                        <option>Staf & Karyawan</option>
+                    </select>
+                </div>
+                <div class="space-y-1.5">
+                    <label class="text-xs font-semibold text-slate-500 dark:text-slate-400">Status Kehadiran</label>
+                    <select class="w-full h-9 px-3 text-xs font-medium bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-200 dark:focus:ring-slate-700 text-slate-800 dark:text-slate-200 transition-all shadow-sm">
+                        <option>Semua Status</option>
+                        <option>Hadir</option>
+                        <option>Terlambat</option>
+                        <option>Izin / Cuti</option>
+                        <option>Alpha</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button class="w-full h-9 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg shadow-sm transition-all cursor-pointer">
+                        <i data-lucide="filter" class="w-3.5 h-3.5"></i>
+                        Terapkan Filter
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white dark:bg-slate-950 p-5 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm flex items-center justify-between">
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Rata-rata Hadir</p>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50 tracking-tight">96.8%</h3>
+                    <p class="text-[11px] font-semibold text-emerald-500 mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> +2.4% dr bulan lalu</p>
+                </div>
+                <div class="p-3 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-xl">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+            </div>
             
-            <!-- Stat Card 1 -->
-            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Bonus</p>
-                        <h3 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 mt-1">
-                            <span class="stat-counter" data-target="1248">0</span>
-                        </h3>
-                    </div>
-                    <div class="p-2 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                        <i data-lucide="users" class="w-4 h-4 text-slate-500 dark:text-slate-400"></i>
-                    </div>
+            <div class="bg-white dark:bg-slate-950 p-5 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm flex items-center justify-between">
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Total Terlambat</p>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50 tracking-tight">42</h3>
+                    <p class="text-[11px] font-semibold text-amber-500 mt-1 flex items-center gap-1"><i data-lucide="trending-down" class="w-3 h-3"></i> -5 dr bulan lalu</p>
                 </div>
-                <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="text-emerald-600 dark:text-emerald-400 font-bold">+4.5%</span> dari bulan lalu
+                <div class="p-3 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-xl">
+                    <i data-lucide="clock-alert" class="w-6 h-6"></i>
                 </div>
             </div>
 
-            <!-- Stat Card 2 -->
-            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Guru & Staf</p>
-                        <h3 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 mt-1">
-                            <span class="stat-counter" data-target="86">0</span>
-                        </h3>
-                    </div>
-                    <div class="p-2 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                        <i data-lucide="graduation-cap" class="w-4 h-4 text-slate-500 dark:text-slate-400"></i>
-                    </div>
+            <div class="bg-white dark:bg-slate-950 p-5 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm flex items-center justify-between">
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Total Izin / Cuti</p>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50 tracking-tight">15</h3>
+                    <p class="text-[11px] font-semibold text-blue-500 mt-1 flex items-center gap-1"><i data-lucide="minus" class="w-3 h-3"></i> stabil dr bulan lalu</p>
                 </div>
-                <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="text-emerald-600 dark:text-emerald-400 font-bold">98.2%</span> tingkat kehadiran
+                <div class="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl">
+                    <i data-lucide="file-signature" class="w-6 h-6"></i>
                 </div>
             </div>
 
-            <!-- Stat Card 3 -->
-            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Rombel / Kelas</p>
-                        <h3 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 mt-1">
-                            <span class="stat-counter" data-target="36">0</span>
-                        </h3>
-                    </div>
-                    <div class="p-2 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                        <i data-lucide="layout-grid" class="w-4 h-4 text-slate-500 dark:text-slate-400"></i>
-                    </div>
+            <div class="bg-white dark:bg-slate-950 p-5 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm flex items-center justify-between">
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Total Alpha</p>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50 tracking-tight">3</h3>
+                    <p class="text-[11px] font-semibold text-rose-500 mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> +1 dr bulan lalu</p>
                 </div>
-                <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">
-                    Semua kelas terisi hari ini
-                </div>
-            </div>
-
-            <!-- Stat Card 4 -->
-            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Presensi Hari Ini</p>
-                        <h3 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 mt-1">
-                            <span class="stat-counter" data-target="96">0</span>%
-                        </h3>
-                    </div>
-                    <div class="p-2 bg-slate-50 dark:bg-slate-900 rounded-lg">
-                        <i data-lucide="clock" class="w-4 h-4 text-slate-500 dark:text-slate-400"></i>
-                    </div>
-                </div>
-                <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="text-emerald-600 dark:text-emerald-400 font-bold">+1.2%</span> dari kemarin
+                <div class="p-3 bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 rounded-xl">
+                    <i data-lucide="user-x" class="w-6 h-6"></i>
                 </div>
             </div>
         </section>
 
-        <!-- DETAILED SECTIONS: CHARTS & ACTIVITIES -->
+        <!-- DETAILED SECTIONS: CHARTS & CALENDAR -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
             <!-- Graph Card (SVG) -->
@@ -93,8 +112,8 @@
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <div>
-                            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">Ikhtisar Kehadiran Bulanan</h3>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">Tingkat kehadiran siswa pada 7 bulan terakhir</p>
+                            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">Tren Kehadiran Pegawai</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Persentase kehadiran dalam 7 bulan terakhir</p>
                         </div>
                     </div>
                     <!-- Mini Graphic SVG Container -->
@@ -142,11 +161,11 @@
                     <!-- Calendar Header -->
                     <div class="flex items-center justify-between mb-6">
                         <button id="calendar-prev" class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg text-slate-500 dark:text-slate-400 transition-colors cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+                            <i data-lucide="chevron-left" class="w-4 h-4"></i>
                         </button>
                         <h3 id="calendar-title" class="text-sm font-bold text-slate-800 dark:text-slate-100 tracking-wide">Juli 2026</h3>
                         <button id="calendar-next" class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg text-slate-500 dark:text-slate-400 transition-colors cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m9 18 6-6-6-6"/></svg>
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
                         </button>
                     </div>
 
@@ -177,32 +196,10 @@
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     const monthNames = [
-                        "January", "February", "March", "April", "May", "June",
-                        "July", "August", "September", "October", "November", "December"
+                        "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                        "Juli", "Agustus", "September", "Oktober", "November", "Desember"
                     ];
-                    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-                    // Indonesian national holidays lookup list
-                    const indonesianHolidays = {
-                        // Fixed annual holidays
-                        '01-01': 'Tahun Baru Masehi',
-                        '05-01': 'Hari Buruh Internasional',
-                        '06-01': 'Hari Lahir Pancasila',
-                        '08-17': 'Hari Kemerdekaan Republik Indonesia',
-                        '12-25': 'Hari Raya Natal',
-                        
-                        // 2026-specific calculated holidays (Islamic, Buddhist, Hindu, Christian)
-                        '2026-01-19': 'Isra Mikraj Nabi Muhammad SAW',
-                        '2026-02-17': 'Tahun Baru Imlek 2577 Kongzili',
-                        '2026-03-20': 'Hari Suci Nyepi (Tahun Baru Saka 1948)',
-                        '2026-03-21': 'Hari Raya Idul Fitri 1447 H',
-                        '2026-04-03': 'Wafat Yesus Kristus',
-                        '2026-04-05': 'Hari Paskah',
-                        '2026-05-14': 'Kenaikan Yesus Kristus',
-                        '2026-05-27': 'Hari Raya Waisak 2570 BE / Idul Adha 1447 H',
-                        '2026-06-16': 'Tahun Baru Islam 1448 Hijriah',
-                        '2026-08-25': 'Maulid Nabi Muhammad SAW'
-                    };
+                    const dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
                     // Current real local date: 14 July 2026
                     const today = new Date(2026, 6, 14); // July is 6 (0-indexed)
@@ -224,18 +221,6 @@
                         29: 'green',
                         30: 'outline'
                     };
-
-                    function getHolidayName(date) {
-                        const y = date.getFullYear();
-                        const m = String(date.getMonth() + 1).padStart(2, '0');
-                        const d = String(date.getDate()).padStart(2, '0');
-                        
-                        // Check specific date or fixed annual day (MM-DD)
-                        const specificKey = `${y}-${m}-${d}`;
-                        const annualKey = `${m}-${d}`;
-                        
-                        return indonesianHolidays[specificKey] || indonesianHolidays[annualKey] || null;
-                    }
 
                     function formatDateString(date) {
                         const dayName = dayNames[date.getDay()];
@@ -267,13 +252,12 @@
                             
                             const thisDate = new Date(currentYear, currentMonth, d);
                             const dayOfWeek = thisDate.getDay();
-                            const holidayName = getHolidayName(thisDate);
                             
                             // Base day style
                             let btnClasses = 'w-9 h-9 mx-auto rounded-xl flex items-center justify-center transition-all duration-150 cursor-pointer focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 ';
                             
-                            // Check Sunday or Holiday for red text color
-                            if (dayOfWeek === 0 || holidayName) {
+                            // Check Sunday for red text color
+                            if (dayOfWeek === 0) {
                                 btnClasses += 'text-rose-500 dark:text-rose-450 font-bold ';
                             } else {
                                 btnClasses += 'text-slate-850 dark:text-slate-200 ';
@@ -302,11 +286,6 @@
                             dayButton.style.height = '36px';
                             dayButton.style.aspectRatio = '1/1';
 
-                            // Set title attribute for native tooltip on hover
-                            if (holidayName) {
-                                dayButton.title = holidayName;
-                            }
-
                             dayButton.addEventListener('click', () => {
                                 selectedDate = thisDate;
                                 updateFooterInfo();
@@ -320,12 +299,7 @@
                     }
 
                     function updateFooterInfo() {
-                        const holiday = getHolidayName(selectedDate);
-                        if (holiday) {
-                            infoEl.innerHTML = `<div class="text-right"><div class="font-bold text-slate-800 dark:text-slate-200">${formatDateString(selectedDate)}</div><div class="text-rose-500 text-[10px] font-extrabold mt-0.5 tracking-tight">${holiday}</div></div>`;
-                        } else {
-                            infoEl.innerHTML = `<span class="font-bold text-slate-800 dark:text-slate-200">${formatDateString(selectedDate)}</span>`;
-                        }
+                        infoEl.innerHTML = `<span class="font-bold text-slate-800 dark:text-slate-200">${formatDateString(selectedDate)}</span>`;
                     }
 
                     document.getElementById('calendar-prev').addEventListener('click', () => {
@@ -358,75 +332,117 @@
             </script>
         </section>
 
-        <!-- QUICK ACTIONS & ACTIVITY FEED -->
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- MAIN TABLE -->
+        <section class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden transition-all w-full p-6 space-y-6">
             
-            <!-- Quick Actions Grid -->
-            <div class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
-                <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-4">Aksi Cepat</h3>
-                <div class="grid grid-cols-2 gap-2">
-                    <button class="flex flex-col items-center justify-center p-3 border border-slate-200 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-lg group transition-all duration-150 cursor-pointer">
-                        <i data-lucide="user-plus" class="w-4 h-4 text-slate-650 dark:text-slate-450 group-hover:scale-105 transition-transform"></i>
-                        <span class="text-xs font-medium text-slate-700 dark:text-slate-300 mt-1.5">Tambah Siswa</span>
-                    </button>
-                    <button class="flex flex-col items-center justify-center p-3 border border-slate-200 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-lg group transition-all duration-150 cursor-pointer">
-                        <i data-lucide="clipboard-list" class="w-4 h-4 text-slate-655 dark:text-slate-455 group-hover:scale-105 transition-transform"></i>
-                        <span class="text-xs font-medium text-slate-700 dark:text-slate-300 mt-1.5">Input Nilai</span>
-                    </button>
-                    <button class="flex flex-col items-center justify-center p-3 border border-slate-200 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-lg group transition-all duration-150 cursor-pointer">
-                        <i data-lucide="send" class="w-4 h-4 text-slate-650 dark:text-slate-455 group-hover:scale-105 transition-transform"></i>
-                        <span class="text-xs font-medium text-slate-700 dark:text-slate-300 mt-1.5">Kirim Pesan</span>
-                    </button>
-                    <button class="flex flex-col items-center justify-center p-3 border border-slate-200 dark:border-slate-850 hover:bg-slate-50 dark:hover:bg-slate-900 rounded-lg group transition-all duration-150 cursor-pointer">
-                        <i data-lucide="receipt" class="w-4 h-4 text-slate-650 dark:text-slate-455 group-hover:scale-105 transition-transform"></i>
-                        <span class="text-xs font-medium text-slate-700 dark:text-slate-300 mt-1.5">Cek SPP</span>
-                    </button>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full">
+                <div class="space-y-1 text-left">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Rincian Kehadiran Pegawai</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Detail rekap absensi per pegawai berdasarkan periode yang difilter.</p>
+                </div>
+                <!-- Search -->
+                <div class="relative w-full md:w-64">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <i data-lucide="search" class="w-4 h-4 text-slate-400 dark:text-slate-550"></i>
+                    </span>
+                    <input type="text" placeholder="Cari Nama Pegawai..." class="w-full h-9 pl-9 pr-4 text-xs font-medium bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-200 dark:focus:ring-slate-700 text-slate-800 dark:text-slate-200 transition-all shadow-inner">
                 </div>
             </div>
 
-            <!-- Recent Activity Logs -->
-            <div class="animate-card lg:col-span-2 bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
-                <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-4">Log Aktivitas Terbaru</h3>
-                <div class="space-y-3.5">
-                    <div class="flex items-center justify-between py-1 border-b border-slate-50 dark:border-slate-900/60 pb-3">
-                        <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-lg bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400">
-                                <i data-lucide="key" class="w-3.5 h-3.5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Login Wali Kelas XI-IPA</p>
-                                <p class="text-xs text-slate-500">Guru: Drs. Eko Prasetyo</p>
-                            </div>
-                        </div>
-                        <span class="text-xs text-slate-450">10 mnt yang lalu</span>
-                    </div>
-                    <div class="flex items-center justify-between py-1 border-b border-slate-50 dark:border-slate-900/60 pb-3">
-                        <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-lg bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400">
-                                <i data-lucide="file-plus" class="w-3.5 h-3.5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Unggah Materi Fisika Kuantum</p>
-                                <p class="text-xs text-slate-500">Kelas: XII-IPA</p>
-                            </div>
-                        </div>
-                        <span class="text-xs text-slate-450">24 mnt yang lalu</span>
-                    </div>
-                    <div class="flex items-center justify-between py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-lg bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-400">
-                                <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Verifikasi Berkas Pendaftaran</p>
-                                <p class="text-xs text-slate-500">Gelombang 2 SANS Malang</p>
-                            </div>
-                        </div>
-                        <span class="text-xs text-slate-455">45 mnt yang lalu</span>
-                    </div>
+            <div class="overflow-x-auto border border-slate-100 dark:border-slate-900 rounded-xl">
+                <table class="w-full text-xs border-collapse text-left">
+                    <thead>
+                        <tr class="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30">
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-16">No</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider">Nama Pegawai</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider">Jabatan</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider text-center">Hadir</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider text-center">Terlambat</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider text-center">Izin / Cuti</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider text-center">Alpha</th>
+                            <th class="px-6 py-4 font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider text-right">Persentase Kehadiran</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60">
+                        <!-- Example Row 1 -->
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">1</td>
+                            <td class="px-6 py-4">
+                                <div class="font-bold text-slate-900 dark:text-slate-100">Ahmad Rizali, S.Pd</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">NIP: 1982390123901</div>
+                            </td>
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">Guru Matematika</td>
+                            <td class="px-6 py-4 text-center text-emerald-600 dark:text-emerald-400 font-bold text-sm">24</td>
+                            <td class="px-6 py-4 text-center text-amber-600 dark:text-amber-400 font-bold text-sm">1</td>
+                            <td class="px-6 py-4 text-center text-slate-500 dark:text-slate-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-center text-rose-500 dark:text-rose-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-right">
+                                <div class="flex items-center justify-end gap-3">
+                                    <span class="font-bold text-slate-900 dark:text-slate-50">98%</span>
+                                    <div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-emerald-500 rounded-full" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Example Row 2 -->
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">2</td>
+                            <td class="px-6 py-4">
+                                <div class="font-bold text-slate-900 dark:text-slate-100">Siti Aminah, M.Pd</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">NIP: 1984281048102</div>
+                            </td>
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">Guru B. Inggris</td>
+                            <td class="px-6 py-4 text-center text-emerald-600 dark:text-emerald-400 font-bold text-sm">20</td>
+                            <td class="px-6 py-4 text-center text-amber-600 dark:text-amber-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-center text-slate-500 dark:text-slate-400 font-bold text-sm">5</td>
+                            <td class="px-6 py-4 text-center text-rose-500 dark:text-rose-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-right">
+                                <div class="flex items-center justify-end gap-3">
+                                    <span class="font-bold text-slate-900 dark:text-slate-50">80%</span>
+                                    <div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-amber-500 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Example Row 3 -->
+                        <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/50 transition-colors">
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">3</td>
+                            <td class="px-6 py-4">
+                                <div class="font-bold text-slate-900 dark:text-slate-100">Budi Santoso</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">NIK: 20230193021</div>
+                            </td>
+                            <td class="px-6 py-4 text-slate-700 dark:text-slate-300">Staf TU</td>
+                            <td class="px-6 py-4 text-center text-emerald-600 dark:text-emerald-400 font-bold text-sm">23</td>
+                            <td class="px-6 py-4 text-center text-amber-600 dark:text-amber-400 font-bold text-sm">2</td>
+                            <td class="px-6 py-4 text-center text-slate-500 dark:text-slate-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-center text-rose-500 dark:text-rose-400 font-bold text-sm">0</td>
+                            <td class="px-6 py-4 text-right">
+                                <div class="flex items-center justify-end gap-3">
+                                    <span class="font-bold text-slate-900 dark:text-slate-50">92%</span>
+                                    <div class="w-16 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                        <div class="h-full bg-emerald-500 rounded-full" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+                <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Menampilkan 1-3 dari 86 data</span>
+                <div class="flex items-center gap-1">
+                    <button class="px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded text-xs font-medium text-slate-400 cursor-not-allowed">Sebelumnya</button>
+                    <button class="px-3 py-1.5 bg-slate-900 dark:bg-slate-50 text-white dark:text-slate-900 rounded text-xs font-bold">1</button>
+                    <button class="px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800 rounded text-xs font-medium text-slate-700 dark:text-slate-300 transition-colors">2</button>
+                    <button class="px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800 rounded text-xs font-medium text-slate-700 dark:text-slate-300 transition-colors">3</button>
+                    <button class="px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Selanjutnya</button>
                 </div>
             </div>
+
         </section>
-
     </div>
 </x-admin-layout>
