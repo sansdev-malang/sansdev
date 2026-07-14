@@ -63,8 +63,7 @@
                         Data Guru
                     </span>
                 </a>
-                <a href="{{ route('rombel') }}"
-                    class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg 
+                <a href="{{ route('rombel') }}" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg 
                     {{ Request::routeIs('rombel') ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 font-medium' : 'text-slate-655 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50' }} 
                     text-xs font-medium relative group">
                     <i data-lucide="university" class="menu-icon w-4 h-4"></i>
@@ -83,11 +82,21 @@
                 class="school-info px-2 text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
                 Homebase</h3>
             <nav class="space-y-1"></nav>
+            <a href="{{ route('homebase_leaderboard') }}" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg 
+                    {{ Request::routeIs('homebase_leaderboard') ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 font-medium' : 'text-slate-655 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50' }} 
+                    text-xs font-medium relative group">
+                <i data-lucide="podium" class="menu-icon w-4 h-4"></i>
+                <span class="menu-text">Leaderboard</span>
+                <span
+                    class="sidebar-tooltip absolute left-full ml-3 px-2 py-1 bg-slate-950 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-50 dark:text-slate-100 text-xs font-semibold rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all origin-left duration-150 pointer-events-none whitespace-nowrap z-50">
+                    Leaderboard
+                </span>
+            </a>
             <div x-data="{ open1: false, open2: false }">
                 <button @click="open1 = !open1"
                     class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
                     <div class="flex items-center gap-3">
-                        <i data-lucide="home" class="menu-icon w-4 h-4"></i>
+                        <i data-lucide="database" class="menu-icon w-4 h-4"></i>
                         <span class="menu-text">Database</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
@@ -98,38 +107,42 @@
                 <div x-show="open1" x-collapse
                     class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
                     style="margin-left:20px">
-                    <a href="#"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Laporan Harian & Bonus
+                    <a href="{{ route('homebase_merah') }}"
+                        class="flex items-center gap-2 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-red-600"></i>
+                        <span>Homebase Merah</span>
                     </a>
-                    <a href="#"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Data Absensi
+                    <a href="{{ route('homebase_kuning') }}"
+                        class="flex items-center gap-2 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-yellow-600"></i>
+                        <span>Homebase Kuning</span>
                     </a>
-                </div>
-
-                <button @click="open2 = !open2"
-                    class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
-                    <div class="flex items-center gap-3">
-                        <i data-lucide="file-cog" class="menu-icon w-4 h-4"></i>
-                        <span class="menu-text">Pengaturan Absensi</span>
-                    </div>
-                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
-                        :style="open2 ? 'transform: rotate(90deg);' : ''"></i>
-                </button>
-
-                <div x-show="open2" x-collapse
-                    class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
-                    style="margin-left:20px">
-                    <a href="#"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Skema Bonus
+                    <a href="{{ route('homebase_hijau') }}"
+                        class="flex items-center gap-2 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-green-600"></i>
+                        <span>Homebase Hijau</span>
                     </a>
-                    <a href="{{ route('absensi-karyawan') }}"
-                        class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Karyawan
+                    <a href="{{ route('homebase_biru') }}"
+                        class="flex items-center gap-2 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-blue-600"></i>
+                        <span>Homebase Biru</span>
+                    </a>
+                    <a href="{{ route('homebase_ungu') }}"
+                        class="flex items-center gap-2 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+                        <i data-lucide="sparkles" class="w-3 h-3 text-indigo-600"></i>
+                        <span>Homebase Ungu</span>
                     </a>
                 </div>
+                <a href="{{ route('form_homebase') }}" class="menu-item flex items-center gap-3 px-3 py-2 rounded-lg 
+                    {{ Request::routeIs('form_homebase') ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 font-medium' : 'text-slate-655 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50' }} 
+                    text-xs font-medium relative group">
+                <i data-lucide="star-check" class="menu-icon w-4 h-4"></i>
+                <span class="menu-text">Input Poin</span>
+                <span
+                    class="sidebar-tooltip absolute left-full ml-3 px-2 py-1 bg-slate-950 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-50 dark:text-slate-100 text-xs font-semibold rounded-md shadow-md opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all origin-left duration-150 pointer-events-none whitespace-nowrap z-50">
+                    Input Poin
+                </span>
+            </a>
             </div>
         </div>
 
@@ -143,7 +156,7 @@
                 <button @click="open1 = !open1"
                     class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
                     <div class="flex items-center gap-3">
-                        <i data-lucide="file-key" class="menu-icon w-4 h-4"></i>
+                        <i data-lucide="scan-face" class="menu-icon w-4 h-4"></i>
                         <span class="menu-text">Data Absensi</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
@@ -154,20 +167,20 @@
                 <div x-show="open1" x-collapse
                     class="mt-1 ml-5 pl-4 border-l border-slate-200 dark:border-slate-800 space-y-1"
                     style="margin-left:20px">
-                    <a href="#"
+                    <a href="{{ route('absensi_laporan') }}"
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Laporan Harian & Bonus
+                        Laporan
                     </a>
-                    <a href="#"
+                    <a href="{{ route('absensi_riwayat') }}"
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
-                        Data Absensi
+                        Riwayat
                     </a>
                 </div>
 
                 <button @click="open2 = !open2"
                     class="menu-item w-full flex items-center justify-between px-3 py-2 rounded-lg text-slate-650 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors text-xs font-medium relative group cursor-pointer">
                     <div class="flex items-center gap-3">
-                        <i data-lucide="file-cog" class="menu-icon w-4 h-4"></i>
+                        <i data-lucide="calendar-cog" class="menu-icon w-4 h-4"></i>
                         <span class="menu-text">Pengaturan Absensi</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-3.5 h-3.5 transition-transform duration-200"
@@ -181,7 +194,7 @@
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
                         Skema Bonus
                     </a>
-                    <a href="{{ route('absensi-karyawan') }}"
+                    <a href="{{ route('absensi_karyawan') }}"
                         class="block py-1.5 text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
                         Karyawan
                     </a>
