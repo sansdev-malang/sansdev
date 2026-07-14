@@ -149,17 +149,17 @@
         <!-- SECTION 4: TABLE (PREMIUM DESIGN) -->
         <section class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden transition-all w-full">
             <div class="overflow-x-auto">
-                <table class="w-full text-sm border-collapse">
+                <table class="w-full text-xs border-collapse">
                     <thead>
                         <tr class="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30">
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-16">No</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-48">NUPTK</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider">Nama Guru</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">Mata Pelajaran</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-36">Jenis Kelamin</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">Kepegawaian</th>
-                            <th class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-28">Status</th>
-                            <th class="px-6 py-4 text-right text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-24">Aksi</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-16">No</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-48">NUPTK</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider">Nama Guru</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">Mata Pelajaran</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-36">Jenis Kelamin</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">Kepegawaian</th>
+                            <th class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-28">Status</th>
+                            <th class="px-6 py-4 text-right text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-24">Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100 dark:divide-slate-900">

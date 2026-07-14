@@ -79,26 +79,26 @@
 
             <!-- Table Container -->
             <div class="overflow-x-auto border border-slate-100 dark:border-slate-900 rounded-xl">
-                <table class="w-full text-sm border-collapse">
+                <table class="w-full text-xs border-collapse">
                     <thead>
                         <tr class="border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/30">
                             <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-16">
+                                class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-16">
                                 No</th>
                             <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider">
+                                class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider">
                                 Nama / Email</th>
                             <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">
+                                class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-40">
                                 Jabatan</th>
                             <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-44">
+                                class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-44">
                                 UID ZKTeco</th>
                             <th
-                                class="px-6 py-4 text-left text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-36">
+                                class="px-6 py-4 text-left text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-36">
                                 Role</th>
                             <th
-                                class="px-6 py-4 text-right text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-24">
+                                class="px-6 py-4 text-right text-xs font-semibold text-slate-550 dark:text-slate-400 uppercase tracking-wider w-24">
                                 Aksi</th>
                         </tr>
                     </thead>

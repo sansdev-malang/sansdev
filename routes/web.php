@@ -19,6 +19,10 @@ Route::get('/absensi-karyawan', function () {
     return view('admin.absensi-karyawan');
 })->middleware(['auth', 'verified'])->name('absensi-karyawan');
 
+Route::get('/rombel', function () {
+    return view('admin.rombel');
+})->middleware(['auth', 'verified'])->name('rombel');
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -4,8 +4,8 @@
         <!-- GREETING / PAGE TITLE -->
         <section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full text-left">
             <div class="flex flex-col gap-0.5">
-                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Daftar Siswa</h2>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Kelola dan pantau data akademis siswa SANS Malang.
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Daftar Rombongan Belajar</h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Kelola dan pantau Rombongan Belajar SANS Malang.
                 </p>
             </div>
             <div class="flex items-center gap-3 shrink-0">
