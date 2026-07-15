@@ -5,7 +5,20 @@
         <section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full text-left">
             <div class="flex flex-col gap-0.5">
                 <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Manajemen Karyawan</h2>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Halaman ini digunakan untuk mengelola data akun karyawan, guru, dan staff.</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Halaman ini digunakan untuk mengelola data akun
+                    karyawan, guru, dan staff.</p>
+            </div>
+            <div class="flex items-center gap-2.5 shrink-0">
+                <button
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-855 text-slate-700 dark:text-slate-355 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-150 cursor-pointer">
+                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-slate-500"></i>
+                    Tarik Karyawan
+                </button>
+                <button
+                    class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-50 hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 text-xs font-semibold rounded-lg shadow-sm transition-all duration-150 cursor-pointer">
+                    <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
+                    Tambah Manual
+                </button>
             </div>
         </section>
 
@@ -13,29 +26,8 @@
         <section
             class="animate-card bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden transition-all w-full p-6 space-y-6">
 
-            <!-- Table Header Toolbar -->
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full text-left">
-                <div class="space-y-1">
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-slate-50">Daftar Karyawan</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Kelola semua pengguna sistem dan karyawan yang
-                        terdaftar di mesin.</p>
-                </div>
-                <div class="flex items-center gap-2.5 shrink-0">
-                    <button
-                        class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-855 text-slate-700 dark:text-slate-355 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-150 cursor-pointer">
-                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-slate-500"></i>
-                        Tarik Karyawan
-                    </button>
-                    <button
-                        class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 dark:bg-slate-50 hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 text-xs font-semibold rounded-lg shadow-sm transition-all duration-150 cursor-pointer">
-                        <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
-                        Tambah Manual
-                    </button>
-                </div>
-            </div>
-
             <!-- Search & Filters Container -->
-            <div class="flex flex-col md:flex-row gap-4 items-end justify-between w-full">
+            <div class="flex flex-col md:flex-row items-end justify-between w-full">
                 <!-- Search Box -->
                 <div class="space-y-1.5 w-full md:flex-1 md:max-w-md">
                     <label class="text-xs font-semibold text-slate-500 dark:text-slate-400">Cari Karyawan</label>

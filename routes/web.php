@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
+
 // Route Absensi
 Route::get('/absensi_hari_ini', function () {
     return view('admin.absensi_hari_ini');
@@ -68,7 +69,6 @@ Route::get('/absensi_bonus_denda', function () {
 Route::get('/absensi_karyawan', function () {
     return view('admin.absensi_karyawan');
 })->middleware(['auth', 'verified'])->name('absensi_karyawan');
-
 
 
 
